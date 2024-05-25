@@ -1,21 +1,23 @@
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+let slideIndex = 0;
 
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+    let slides = document.querySelectorAll('.slide');
+    let slidesWrapper = document.querySelector('.slides-wrapper');
+
+    if (n >= slides.length - 2) {
+        slideIndex = slides.length - 3;
+    } else if (n < 0) {
+        slideIndex = 0;
+    } else {
+        slideIndex = n;
     }
-    slides[slideIndex-1].style.display = "block";  
+
+    slidesWrapper.style.transform = 'translateX(' + (-slideIndex * 33.33) + '%)';
 }
+
+function plusSlides(n) {
+    showSlides(slideIndex + n);
+}
+
+// Initialize the first set of slides
+showSlides(slideIndex);

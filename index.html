@@ -18,11 +18,11 @@
             <a class="buttons" href="#home">Home</a>
             <a class="buttons" href="events.html">Photos</a>
             <a class="buttons" href="blog.html">Projects</a>
-            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/richardli0/" target="_blank" rel="noopener noreferrer">
                 <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
             </a>
-            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
-                <img class="buttons" src="instagram.png" alt="Instagram" style="max-height:17px;max-width:17px;margin: 0 0px;">
+            <a href="https://github.com/RichardLi-1" target="_blank" rel="noopener noreferrer">
+                <img class="buttons" src="github.png" alt="Github" style="max-height:17px;max-width:17px;margin: 0 0px;">
             </a>
             <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
         </nav>
@@ -52,49 +52,37 @@
     
     <div class="container2">
         <div class="slideshow-container">
-            <div class="slide fade">
-                <div class="slide-content">
+            <div class="slides-wrapper">
+                <div class="slide fade">
                     <img src="boink.jpeg" alt="Bo!nk - iOS Game">
                     <div class="text">Bo!nk - iOS Game</div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content">
+                <div class="slide fade">
                     <img src="image2.jpg" alt="Threads">
                     <div class="text">Threads - Reverse engineered social media app</div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content">
+                <div class="slide fade">
                     <a href="Ambrosia/index.html"><img src="ambrosia.png" alt="Ambrosia"></a>
                     <div class="text">Ambrosia - Custom Skincare Curator</div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content">
+                <div class="slide fade">
                     <img src="image4.jpg" alt="Image 4">
                     <div class="text">Image 4 Description</div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content">
+                <div class="slide fade">
                     <img src="image5.jpg" alt="Image 5">
                     <div class="text">Image 5 Description</div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content">
+                <div class="slide fade">
                     <img src="image6.jpg" alt="Image 6">
                     <div class="text">Image 6 Description</div>
                 </div>
             </div>
-    
+            
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-    
-        <script src="script.js"></script>
     
         <!-----contact----->
         <div id="contact">
@@ -122,28 +110,6 @@
         $(function() {
             $("#includeHtml").load("footer.html");
         });
-
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slides[slideIndex-1].style.display = "block";  
-        }
     </script>
 </body>
 </html>
