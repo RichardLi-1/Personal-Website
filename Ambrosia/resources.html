@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources - Glimmers of Hope</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<link href='style.css' rel='stylesheet'>
+</head>
+
+<!------------------------ body of webpage ------------------------>
+<body>
+    <div id="head">
+        <div class="header-left">
+            <a href="index.html"><img id="logo" src="logo.jpg" alt="Logo"></a>
+            <h1 id="navbar-title">Resources</h1>
+        </div>
+        <nav>
+            <a class="buttons" href="index.html">Home</a>
+            <a class="buttons" href="events.html">Events</a>
+            <a class="buttons" href="blog.html">Blog</a>
+            <a class="buttons" href="resources.html" style="text-decoration-line:underline;">Resources</a>
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
+            </a>
+            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+                <img class="buttons" src="instagram.png" alt="Instagram" style="max-height:17px;max-width:17px;margin: 0 0px;">
+            </a>
+            <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+          </nav>
+      </div>
+  
+      <!-- Menu content -->
+      <div id="menu" onclick="toggleMenu()" class="menu-content">
+          <a href="index.html" class="menu-item common-font">Home</a>
+          <a href="index.html#events" class="menu-item common-font">Upcoming Events</a>
+          <a href="blog.html" class="menu-item common-font">Blog</a>
+          <a href="resources.html" class="menu-item common-font">Resources</a>
+          <div class="menu-item">
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="instagram.png" alt="Instagram" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+        </div>
+      </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- Top Image Area -->
+    <div class="sunset" id="home">
+        <h2 id="title-text">RESOURCES</h2>
+    </div>
+    <div class="container2">
+        <!------------------------ header ------------------------>
+        <script src="script.js"></script>
+        <link href='style.css' rel='stylesheet'>
+        <link href='profile-style.css' rel='stylesheet'>
+
+        <!------------------------ body of webpage ------------------------>
+        <section id="profile-container" style="margin-top:30px">
+          <div id="profile-photo">
+            <a href="https://www.360kids.ca/" target="_blank" rel="noopener noreferrer"><img style="max-width: 20vh; max-height:50vh; object-fit: cover;" src="360kids.png"></a>
+          </div>
+          <div class="profile-info" style="margin-right:20px;">
+            <a ref="https://www.360kids.ca/" target="_blank" rel="noopener noreferrer"><h2 class ="common-font profile-text" style="font-size:40px; text-decoration:none;">360°Kids</h2></a>
+            <h3 class="common-font" style="color:#AAA;">Charity</h3>
+            <p class="common-font profile-text" style="font-size:20px;"><br>Every kid deserves access to a safe home. 360°kids now serves over 2,500 youth each year, from every municipality in York Region. Although in the last three years we saw this number fluctuate, our commitment to providing essential housing, employment, education and well-being services, never wavered. 360°Kids aims to prevent homelessness by helping youth at risk or in crisis transition to a state of safety and stability.</p>
+          </div>
+        </section>
+
+        <section id="profile-container" style="margin-top:30px">
+            <div id="profile-photo">
+              <a href="https://www.360kids.ca/" target="_blank" rel="noopener noreferrer"><img style="max-width: 20vh; max-height:50vh; object-fit: cover;" src=".png"></a>
+            </div>
+            <div class="profile-info" style="margin-right:20px;">
+              <a ref="https://www.360kids.ca/" target="_blank" rel="noopener noreferrer"><h2 class ="common-font profile-text" style="font-size:40px; text-decoration:none;">Room for a Child
+            </h2></a>
+              <h3 class="common-font" style="color:#AAA;">Charity</h3>
+              <p class="common-font profile-text" style="font-size:20px;"><br>At Room for a Child we create beautiful bedrooms for children in need. We do that by accepting good, used furniture from individuals as well as corporate donations of items such as paint and linens. All work is done by volunteers.
+              </p>
+            </div>
+        </section>
+
+
+    </div>
+        </body>
+        <br><br><br>
+        <!------------------------ footer ------------------------>
+        <footer id="includeHtml"></footer>
+        </html>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function() {
+                $("#includeHtml").load("footer.html");
+            });
+        </script>
+
+<div class="preload" style="display:none;">
+    <img src="mvmf.jpg">
+    <img src="decembersale.jpeg">
+    <img src="michelle-new.png">
+    <img src="richard-new.png">
+    <img src="360kids.png">
+</div>
+
+<style>
+    @media(prefers-light-scheme: light){
+        #profile-photo{
+            filter: brightness(80%);
+        }
+    }
+</style>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ambrosial</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body style="background-color: #e6dad1">
+    <div id="head">
+      <div class="header-left">
+        <h1 id="navbar-title"><a href="index.html">Ambrosia</a></h1>
+      </div>
+      <nav>
+        <a class="buttons" href="survey.html">Discover Your Skin Type</a>
+        <a class="buttons" href="resources.html">Sign In</a>
+        <img
+          src="menu.png"
+          onclick="toggleMenu()"
+          class="social-icon mobile-only"
+        />
+      </nav>
+    </div>
+    <br /><br /><br />
+
+    <!-- Menu content -->
+    <div id="menu" onclick="toggleMenu()" class="menu-content">
+      <a href="index.html" class="menu-item common-font">Home</a>
+      <a href="skinType.html" class="menu-item common-font"
+        >Discover Your Skin Type</a
+      >
+      <a href="survey.html" class="menu-item common-font">Create Your Plan</a>
+      <a href="survey.html" class="menu-item common-font">Sign In</a>
+      <div class="menu-item">
+        <a
+          href="https://www.linkedin.com/company/100954304"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="linkedin.jpeg"
+            alt="LinkedIn"
+            style="max-height: 30px; max-width: 30px; margin: 0 0px"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/glimmerssofhope/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="instagram.png"
+            alt="Instagram"
+            style="max-height: 30px; max-width: 30px; margin: 0 0px"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div height="100%" style="align-items: center">
+      <br /><br />
+      <br />
+      <h1 style="text-align: center; font-size: 40px; font-family: Codec Pro">
+        Complete Your Skin Profile
+      </h1>
+      <div class="survey">
+        <div class="entry">
+          <div
+            style="float: right; justify-content: center; margin-right: 10vw"
+          >
+            <img src="weather.png" width="400" height="auto" />
+          </div>
+          <div style="float: left">
+            <h2 style="font-size: 40px; font-family: Codec Pro">
+              What is the weather like in your area?
+            </h2>
+            <div class="answer-choices">
+              <input type="checkbox" />
+              <span class="seatButton" onclick="changeColor(this)"
+                >Bright and Sunny</span
+              >
+
+              <p style="font-size: 28px"></p>
+              <input type="checkbox" />
+              <span class="seatButton" onclick="changeColor(this)"
+                >Humid and Dry</span
+              >
+              <p style="font-size: 28px"></p>
+              <input type="checkbox" />
+              <span class="seatButton" onclick="changeColor(this)"
+                >Cold and Dry</span
+              >
+              <p style="font-size: 28px"></p>
+
+              <input type="checkbox" />
+              <span class="seatButton" onclick="changeColor(this)"
+                >Variable (Changing Frequently)</span
+              >
+
+              <br />
+              <br />
+              <button class="next">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry" style="display: none">
+          <div style="float: right; justify-content: center">
+            <img src="sleep.png" width="300" height="270" />
+          </div>
+          <br />
+          <h2 style="font-size: 40px; font-family: Codec Pro">
+            How much sleep do you get a night?
+          </h2>
+          <div class="answer-choices">
+            <input type="checkbox" />
+            <span class="seatButton" onclick="changeColor(this)"
+              >Less than 7 hours</span
+            >
+            <p style="font-size: 28px"></p>
+            <input type="checkbox" />
+            <span class="seatButton" onclick="changeColor(this)"
+              >More than 7 hours</span
+            >
+            <p style="font-size: 28px"></p>
+            <input type="checkbox" />
+            <span class="seatButton" onclick="changeColor(this)"
+              >I work at night and sleep during the day</span
+            >
+            <p style="font-size: 28px"></p>
+            <input type="checkbox" />
+            <span class="seatButton" onclick="changeColor(this)"
+              >Variable (Changing Frequently)</span
+            >
+            <p style="font-size: 28px"></p>
+            <button class="back">Back</button>
+            <button class="next">Next</button>
+          </div>
+        </div>
+
+        <br /><br />
+        <div class="entry" style="display: none; justify-content: center">
+          <div style="float: right; justify-content: center">
+            <img src="stressed.png" width="300" height="270" />
+          </div>
+          <h2 style="font-size: 40px; font-family: Codec Pro">
+            How often are you stressed out?
+          </h2>
+          <div class="answer-choices">
+            <input type="checkbox" />
+            <span class="seatButton" onclick="changeColor(this)">Rarely</span>
+            <p style="font-size: 28px"></p>
+            <input type="checkbox" />
+            <span class="seatButton" onclick="changeColor(this)"
+              >Multiple times a week</span
+            >
+            <p style="font-size: 28px"></p>
+            <input type="checkbox" />
+            <span class="seatButton" onclick="changeColor(this)">Daily</span>
+            <p style="font-size: 28px"></p>
+            <button class="back">Back</button>
+            <button
+              style="
+                color: #9d5a4d;
+                font-family: Now;
+                font-weight: bold;
+                font-size: 20px;
+              "
+            >
+              <a
+                href="results.html"
+                style="color: #9d5a4d; justify-content: center"
+                >View Results</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="survey.js"></script>
+  </body>
+</html>
+
+<script>
+  function changeColor(button) {
+    button.classList.toggle("clicked"); // Toggle the 'clicked' class on and off
+  }
+</script>

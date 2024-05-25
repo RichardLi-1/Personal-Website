@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambrosia</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<link href='style.css' rel='stylesheet'>
+<link href='profile-style.css' rel='stylesheet'>
+</head>
+
+<!------------------------ body of webpage ------------------------>
+<body>
+    <div id="head">
+        <div class="header-left">
+            <h1 id="navbar-title"><a href=index.html>Ambrosia</a></h1>
+        </div>
+        <nav>
+          <a class="buttons" href="skintype.html">Discover Your Skin Type</a>
+          <a class="buttons" href="resources.html">Sign In</a>
+        <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+        </nav>
+    </div>
+
+    <!-- Menu content -->
+    <div id="menu" onclick="toggleMenu()" class="menu-content">
+        <a href="#home" class="menu-item common-font">Home</a>
+        <a href="skintype.html" class="menu-item common-font">Find Your Skin Type</a>
+        <a href="resources.html" class="menu-item common-font">Sign In</a>
+        <div class="menu-item">
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+                <img src="instagram.png" alt="Instagram" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <br><br><br><br>
+    <!-- Top Image Area -->
+    <section id="profile-container" style="margin-top:0px;">
+        
+        <div class="profile-info" style="margin-right:20px;">
+          <h2 class = "common-font profile-text" style="margin-bottom:0; font-weight: 500;">Transform your skin with</h2>
+          <h2 class = "common-font profile-text" style="margin-top:0; font-weight: 900">Custom Care</h2>
+          <p class="common-font page-text" style="font-size:20px; text-align: center">Custom Skincare, Uniquely You — Perfectly Formulated for Your Skin.</p>
+          
+          <a href="survey.html">
+            <button class="actualbutton" style="text-align: center;">CREATE YOUR PLAN</button>
+        </a>
+        </div>
+        <div id="profile-photo">
+            <img src="image.png" width= "500", height= "650">
+          </div>
+    </section>
+<br>
+    <div class="marquee">   
+        <marquee><p class="page-text">Hyaluronic Acid   -   Retinol.   -   Vitamin C   -   Niacinimide   -   Ceramides   -   Collagen</p></marquee>
+    </div>
+
+    <div class="container2" style="background-color: #6F3F2E;">
+        <br>
+        <div style="background-color:#F8D1C1;">
+            <h2 class = "common-font profile-text" style="color:#6F3F2E;">Pore-clogging Ingredients Checker</h2>
+        </div>
+        <p class="page-text" style="text-align:right;color:#F8D1C1;">With acne-prone skin, don’t ever put anything on your skin that is comedogenic or pore-clogging</p>
+    
+        <section id="profile-container" style="margin-top:0px;">
+        
+            <div class="profile-info" style="margin-right:20px;">
+                <input type="text" id="name" name="name" required minlength="200" maxlength="400" size="60" />
+                <div class="profile-info">
+                    <button class="actualbutton">CHECK</button>
+                </div>
+                <div class="profile-info">
+                    <button class="actualbutton">CLEAR</button>
+                </div>
+            </div>
+            <div id="profile-photo">
+                <img src="woman.png">
+                <p class="page-text" style="color:#F8D1C1;">Always check for ingredients before using any products on your face</p>
+              </div>
+        </section>
+    
+    </div>
+    
+    <footer style="width:100vw">
+        <br><br>
+        <h4 class="page-text common-font" style="text-align:center;"><em>Ambrosia 2024</em></h4>
+        <div class="social-media-icons" style="margin-top: 20px;">
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="linkedin.jpeg" alt="LinkedIn"">
+            </a>
+            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <br><br>
+    </footer>
+
+</html>
+

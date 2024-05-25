@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html style="background-color: #E6DAD1;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results - Ambrosia</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+</head>
+
+<div id="headfiller" style="height:38px; background-color:#E6DAD1;">
+</div>
+<div id="head" style="margin-top:38px">
+    <div class="header-left">
+        <h1 id="navbar-title"><a href=index.html>Ambrosia</a></h1>
+    </div>
+    <nav>
+      <a class="buttons" href="skintype.html">Discover Your Skin Type</a>
+      <a class="buttons" href="skintype.html">  </a>
+      <a class="buttons" href="resources.html">Sign In</a>
+    <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+    </nav>
+</div>
+
+<!-- Menu content -->
+<div id="menu" onclick="toggleMenu()" class="menu-content">
+  <a href="#home" class="menu-item common-font">Home</a>
+  <a href="skintype.html" class="menu-item common-font">Find Your Skin Type</a>
+  <a href="resources.html" class="menu-item common-font">Sign In</a>
+  <div class="menu-item">
+      <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+          <img src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+      </a>
+      <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+          <img src="instagram.png" alt="Instagram" style="max-height:30px;max-width:30px;margin: 0 0px;">
+      </a>
+  </div>
+</div>
+
+
+<!------------------------ header ------------------------>
+<body style="background-color: #E6DAD1;">
+<script src="script.js"></script>
+<link href='style.css' rel='stylesheet'>
+<link href='profile-style.css' rel='stylesheet'>
+    
+<div id="head">
+    
+</div>
+
+<br><br>
+<h2 class = "profile-text" style="font-size:40px; font-family: TT Octosquares; color:black; text-align: left;">ACNE-PRONE CLEANSERS<br></h2>
+<!------------------------ acne prone ------------------------>
+<section id="profile-container" style="background-color: #F0EAE8; border-style:solid; margin-left: 80px; margin-right: 80px; max-width: 3000px;">
+  <div class="profile-info" style="margin-right:20px;">
+    <h2 class = "profile-text" style="font-size:40px; font-family: TT Octosquares; color:black; text-align: left;">YOU ARE...</h2>
+    <h1 style="color:#000; font-family:TT Hoves; font-size: 100px; margin:0;">ACNE PRONE</h1>
+    <p class="profile-text" style="font-size:35px; font-family:TT Hoves Thin; color:black; text-align: left;"><br>Oily skin produces excess sebum, causing shine and breakouts. For acne-prone skin, use products with salicylic acid, benzoyl peroxide, or tea tree oil to reduce oil, clear pores, and fight bacteria.</p>
+      <button class="actualbutton">See Products</button>
+  </div>
+  <div id="profile-photo" style="min-height: 70vh; min-width:40vw">
+    <img src="acneprone.png" style="border-style:dashed; border-color: #333; border-width: 4px; width: 100%; height: 100%;">
+  </div>
+</section>
+
+
+</body>
+<br><br><br>
+
+<!------------------------ footer ------------------------>
+<footer id="includeHtml"></footer>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+        $("#includeHtml").load("footer.html");
+    });
+</script>

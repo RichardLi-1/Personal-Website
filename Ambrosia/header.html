@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glimmers of Hope</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<link href='style.css' rel='stylesheet'>
+</head>
+
+
+<div class="header-left">
+    <a href="index.html"><img id="logo" src="logo.jpg" alt="Logo"></a>
+    <a href="index.html" style="text-decoration: none;"><h1 id="navbar-title" style="opacity: 100">Glimmers of Hope</h1></a>
+</div>
+<nav>
+    <a class="buttons" href="index.html">Home</a>
+    <a class="buttons" href="events.html">Events</a>
+    <a class="buttons" href="blog.html">Blog</a>
+    <a class="buttons" href="resources.html">Resources</a>
+    <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+      <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
+    </a>
+    <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+      <img class="buttons" src="instagram.png" alt="Instagram" style="max-height:17px;max-width:17px;margin: 0 0px;">
+    </a>
+    <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+  </nav>
+</div>
+
+<!-- Menu content -->
+<div id="menu" onclick="toggleMenu()" class="menu-content">
+  <a href="index.html" class="menu-item common-font">Home</a>
+  <a href="index.html#events" class="menu-item common-font">Upcoming Events</a>
+  <a href="blog.html" class="menu-item common-font">Blog</a>
+  <a href="resources.html" class="menu-item common-font">Resources</a>
+  <div class="menu-item">
+    <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+        <img class="social-icon" src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+    </a>
+    <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+        <img class="social-icon" src="instagram.png" alt="Instagram" style="max-height:30px;max-width:30px;margin: 0 0px;">
+    </a>
+</div>
+</div>
+
+
+</html>
+
+<style>
+  .buttons {
+    color: #EEEEEE;
+    font-family: Raleway;
+    font-weight: bold;
+  }
+
+  @media(prefers-color-scheme:light){
+    .buttons {
+      filter: brightness(5%);
+      font-family: Raleway;
+      font-weight: bold;
+    }
+  }
+</style>
