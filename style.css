@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('Neue\ Machina/NeueMachina-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
   margin: 0;
-  background-color: #FCFCFC;
-}
-
-@media (prefers-color-scheme: dark) {
-  html, body {
-      background-color: #111111;
-  }
+  /*background-color: #FCFCFC;*/
+  background-color: #111111;
 }
 
 .common-font {
@@ -113,11 +115,6 @@ nav a:hover {
   color: #E0E0E0;
 }
 
-@media (prefers-color-scheme: light) {
-  .page-text {
-      color: #111111;
-  }
-}
 
 .container2 {
   max-width: 1000px;
@@ -133,8 +130,8 @@ nav a:hover {
 
 #title-text {
   text-align: center;
-  font-family: Helvetica;
-  font-size: 70px;
+  font-family: Neue Machina;
+  font-size: 60px;
   color: white;
   letter-spacing: 7px;
   opacity: 100; /* Title is initially visible */
