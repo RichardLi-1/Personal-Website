@@ -1,0 +1,425 @@
+@font-face {
+    font-family: 'Rasputin';
+    src: url('Rasputin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Now';
+    src: url('now/Now-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Hoves';
+    src: url('tt_hoves_pro/TT\ Hoves\ Pro\ Trial\ Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Hoves Thin';
+    src: url('tt_hoves_pro/TT\ Hoves\ Pro\ Trial\ Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Octosquares';
+    src: url('tt_octosquares/TT\ Octosquares\ Trial\ Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Codec Pro';
+    src: url('codec-pro/CodecPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin:0;
+    background-color: #E6DAD1;
+  }
+  
+  .common-font {
+    font-family:Rasputin
+  }
+  
+  #head {
+    background:#844C37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+  
+  #headfiller {
+    background:#844C37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo {
+    height: 30px;
+    width: 30px;
+    border-radius: 10%;
+    margin-right: 15px;
+  }
+  
+  #navbar-title {
+    color: #EDE8D5;
+    transition: opacity 0.15s ease-in-out; /* Smooth transition */
+    font-family: Rasputin;
+    margin: 0;
+    font-size: 40px;
+  }
+  
+  
+  nav {
+    display: flex;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #666666;
+    margin-left: 15px;
+  }
+  
+  nav a:hover {
+    filter: brightness(80%);
+  }
+  
+  .buttons {
+    color: #F8D1C1;
+    font-family: Now;
+    font-weight: bold;
+    font-size:20px;
+  }
+  
+  h1 a {
+    color: #F8D1C1;
+  }
+  
+  a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+  
+  .survey { 
+    text-align: left;
+    margin-left: 100px;
+  } 
+   
+  .survey h2 { 
+    text-align: left;
+    margin-left: 100px;
+  } 
+   
+  .answer-choices { 
+    text-align: left;
+    margin-left: 100px;
+  } 
+   
+  .answer-choices label { 
+    text-align: left;
+    font-size: 30;
+    margin-left: 100px;
+  } 
+   
+  .answer-choices input[type="radio"] { 
+    text-align: left;
+    margin-left: 100px;
+  } 
+  .entry {
+    padding-top: 0px;
+  }
+  .label{
+    height:200px;
+    width:200px;
+  }
+  .survey input { display: none; }
+  .survey .seatButton {font-size: 30px; border-radius: 5px; height:200px;
+    width:200px;padding: 10px; background: #f9d0c1; font-family:Codec Pro;}
+  
+  .survey .seatButton.clicked { background: #9d5a4d; }
+  
+  .next{
+    color: #9d5a4d;
+    font-family: Now;
+    font-weight: bold;
+    font-size:20px;
+    align-items: center;
+  }
+  
+  .back{
+    color: #9d5a4d;
+    font-family: Now;
+    font-weight: bold;
+    font-size:20px;
+    align-items: center;
+  }
+  
+  .disappear{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /*----------------------Sunset Photo and Below---------------------*/
+  
+  .page-text{
+    font-family:Rasputin;
+    color:#9D5A4D;
+  }
+  
+  .container2 {
+          margin: 0 auto; /* Center the container horizontally */
+          padding: 0 20px; /* Padding for better readability */
+          background-color:#E6DAD1;
+      }
+  #title-text {
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 70px;
+    color: white;
+    letter-spacing: 7px;
+    opacity: 100; /* Title is initially visible */
+    transition: opacity 0.15s ease-in-out; /* Smooth transition for the fade in and out */
+  }
+  
+  
+    .sunset {
+      display: flex;
+      height: 72vh;
+      max-height:800px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      background-image: url('tree.jpeg');
+      background-size: cover;
+      background-position: top;
+      background-attachment: fixed; /* can be removed once the parallax effect is purely JavaScript driven */
+    }
+  
+    @media (prefers-color-scheme: light) {
+      .sunset {
+        filter: brightness(115%);
+      }
+    }
+  
+  .headers {
+    text-align:center;
+    color:white;
+  }
+  
+  @media (prefers-color-scheme: light){
+    .headers {
+      color:black;
+    }
+  }
+  
+  /*----------------------Meet The Team----------------------*/
+  .team-section {
+    text-align: center;
+    margin: 50px 0; /* Space around the section */
+  }
+  
+  .profile {
+    display: inline-block; /* Profiles side by side */
+    margin: 0 20px; /* Space between profiles */
+  }
+  
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the images round */
+    background-color: #c0e1fa;
+    object-fit: cover
+  }
+  
+  .profile-name {
+    margin-top: 10px; /* Space between image and name */
+    font-size: 20px; /* Font size for the name */
+  }
+  
+  .profile-social { /* Social Media Handle */
+    font-size: 16px;
+    color: #AAAAAA;
+  }
+  
+  .profile-name, .profile-social {
+    font-family: 'Rasputin', sans-serif;
+    font-size: 16px
+  }
+  
+  .profile a:hover{
+    filter: brightness(90%);
+  }
+  
+  /*----------------------Footer----------------------*/
+  .social-icon {
+    max-width: 35px;
+    max-height: 35px;
+    margin: 0 10px; /* Adjust spacing between icons */
+  }
+  
+  
+  /*----------------Mobile Optimization----------------*/
+  .mobile-only{
+    display: none
+  }
+  
+  @media (max-width: 768px) {
+    #profile-text {
+      font-size: 30px; /* Smaller font size for small devices */
+    }
+    .container2{
+      margin-left:20px;
+      margin-right:20px;
+    }
+  
+    .transformskin{
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #profile-text {
+      font-size: 40px; /* Even smaller font size for phones */
+    }
+    .buttons {
+        display: none;
+    }
+  
+    .mobile-only{
+      display: inline;
+    }
+    .richard {
+      margin-bottom:40px;
+    }
+  }
+  
+  
+  /*Mobile Menu*/
+  
+  .menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+  }
+  
+  .menu-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Translucent black background */
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-item {
+    color: white;
+    font-size: 32px;
+    padding: 20px;
+    text-decoration: none;
+    opacity: 0;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .show {
+    display: flex;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .show .menu-item {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  .show .menu-item:nth-child(1) { animation-delay: 0.2s; }
+  .show .menu-item:nth-child(2) { animation-delay: 0.4s; }
+  .show .menu-item:nth-child(3) { animation-delay: 0.6s; }
+  .show .menu-item:nth-child(4) { animation-delay: 0.8s; }
+  .show .menu-item:nth-child(5) { animation-delay: 1.0s; }
+  
+  .profile-text {
+    color:#9D5A4D;
+    font-size:80px;
+    text-align: center;
+  }
+  
+  .marquee{
+    background-color:white;
+  }
+  
+  .actualbutton {
+    background-color: #F6F1EE; /* Soft peach background color */
+    border: none;              /* Removes the border */
+    padding: 15px 30px;        /* Increases the size, adjust as needed */
+    border-radius: 50px;       /* Provides a fully rounded shape, increase for more roundness if needed */
+    font-size: 15px;           /* Adjusts the font size, change it according to your design needs */
+    cursor: pointer;           /* Changes the mouse cursor to a pointer when hovering over the button */
+    transition: background-color 0.3s ease; /* Optional: Smooth transition for hover effect */
+    font-family: Now;
+    color:#9D5A4D;
+  }
+  
+  .actualbutton:hover {
+    background-color: #E5DCD9; /* Slightly darker shade of the button color for hover effect */
+  }
+  
+  
