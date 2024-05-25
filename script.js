@@ -3,14 +3,9 @@ let slideIndex = 0;
 function showSlides(n) {
     let slides = document.querySelectorAll('.slide');
     let slidesWrapper = document.querySelector('.slides-wrapper');
+    let numSlides = slides.length;
 
-    if (n >= slides.length - 2) {
-        slideIndex = slides.length - 3;
-    } else if (n < 0) {
-        slideIndex = 0;
-    } else {
-        slideIndex = n;
-    }
+    slideIndex = (n + numSlides) % numSlides;
 
     slidesWrapper.style.transform = 'translateX(' + (-slideIndex * 33.33) + '%)';
 }

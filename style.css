@@ -16,7 +16,11 @@ html, body {
 }
 
 .common-font {
-  font-family: Raleway;
+  font-family: Neue Machina;
+}
+
+.accent{
+  color:#98E8CD;
 }
 
 #head {
@@ -111,7 +115,7 @@ nav a:hover {
 /*----------------------Sunset Photo and Below---------------------*/
 
 .page-text {
-  font-family: Raleway;
+  font-family: Neue Machina;
   color: #E0E0E0;
 }
 
@@ -132,7 +136,6 @@ nav a:hover {
   text-align: center;
   font-family: Neue Machina;
   font-size: 60px;
-  color: white;
   letter-spacing: 7px;
   opacity: 100; /* Title is initially visible */
   transition: opacity 0.15s ease-in-out; /* Smooth transition for the fade in and out */
