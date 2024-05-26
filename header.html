@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richard Li</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<link href='style.css' rel='stylesheet'>
+</head>
+
+
+<div class="header-left">
+    <a href="index.html"><img id="logo" src="logo.png" alt="Logo"></a>
+    <a href="index.html" style="text-decoration: none;"><h1 id="navbar-title" style="opacity: 100"></h1></a>
+</div>
+<nav>
+  <nav>
+    <a class="buttons" href="index.html">Home</a>
+    <a class="buttons" href="photos.html">Photos</a>
+    <a class="buttons" href="projects.html">Projects</a>
+    <a href="https://www.linkedin.com/in/richardli0/" target="_blank" rel="noopener noreferrer">
+        <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
+    </a>
+    <a href="https://github.com/RichardLi-1" target="_blank" rel="noopener noreferrer">
+        <img class="buttons" src="github.png" alt="Github" style="max-height:17px;max-width:17px;margin: 0 0px;">
+    </a>
+    <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+</nav>
+</div>
+
+<!-- Menu content -->
+<div id="menu" onclick="toggleMenu()" class="menu-content">
+  <a href="index.html" class="menu-item common-font">Home</a>
+  <a href="photos.html" class="menu-item common-font">Photos</a>
+  <a href="projects.html" class="menu-item common-font">Projects</a>
+  <div class="menu-item">
+      <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+          <img src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+      </a>
+      <a href="https://github.com/RichardLi-1" target="_blank" rel="noopener noreferrer">
+          <img src="github.png" alt="GitHub" style="max-height:30px;max-width:30px;margin: 0 0px;">
+      </a>
+  </div>
+</div>
+
+
+</html>
+
+<style>
+  .buttons {
+    color: #EEEEEE;
+    font-family: Raleway;
+    font-weight: bold;
+  }
+
+  @media(prefers-color-scheme:light){
+    .buttons {
+      filter: brightness(5%);
+      font-family: Raleway;
+      font-weight: bold;
+    }
+  }
+</style>
