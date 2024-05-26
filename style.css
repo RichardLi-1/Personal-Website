@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');*/
 
 @font-face {
   font-family: 'Neue Machina';
@@ -80,7 +80,7 @@ nav a:hover {
 
 .buttons {
   color: #EEEEEE;
-  font-family: Raleway;
+  font-family: Neue Machina;
   font-weight: bold;
   margin-left: 16px;
 }
@@ -88,7 +88,7 @@ nav a:hover {
 .actualbutton {
   color: #000000;
   background-color: #E8C7FF;
-  font-family: Raleway;
+  font-family: Neue Machina;
   font-weight: light;
   margin-left: 16px;
   padding: 10px;
