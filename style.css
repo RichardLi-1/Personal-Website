@@ -58,12 +58,6 @@ html, body {
   font-size: 24px;
 }
 
-@media (prefers-color-scheme: light){
-  #navbar-title {
-    color: #444444;
-  }
-}
-
 nav {
   display: flex;
 }
@@ -118,12 +112,7 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto; /* Center the container horizontally */
   padding: 0 20px; /* Padding for better readability */
-}
-
-@media (prefers-color-scheme: light) {
-  .container2 {
-      background-color: #111111;
-  }
+  background-color: #111111;
 }
 
 #title-text {
@@ -162,11 +151,6 @@ nav a:hover {
   color: white;
 }
 
-@media (prefers-color-scheme: light){
-  .headers {
-    color: black;
-  }
-}
 
 /*----------------------Footer----------------------*/
 .social-icon {
@@ -286,12 +270,6 @@ nav a:hover {
 
 .profile-text {
   color: #EEE;
-}
-
-@media (prefers-color-scheme: light) {
-  .profile-text {
-    color: #222;
-  }
 }
 
 /* Slideshow styles */
