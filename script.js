@@ -16,3 +16,8 @@ function plusSlides(n) {
 
 // Initialize the first set of slides
 showSlides(slideIndex);
+
+function toggleMenu(){
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }

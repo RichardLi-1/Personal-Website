@@ -128,8 +128,11 @@ nav a:hover {
 
 #title-text {
   text-align: center;
+  display:inline;
   font-family: Neue Machina;
   font-size: 60px;
+  margin-left:12px;
+  margin-right:12px;
   letter-spacing: 7px;
   opacity: 100; /* Title is initially visible */
   transition: opacity 0.15s ease-in-out; /* Smooth transition for the fade in and out */
@@ -177,9 +180,18 @@ nav a:hover {
   display: none;
 }
 
+
+#title-container {
+  display:flex;
+}
 @media (max-width: 768px) {
+  #title-container {
+    flex-direction: column;
+}
+
   #title-text {
     font-size: 50px; /* Smaller font size for small devices */
+    margin:0px;
   }
   .container2 {
     margin-left: 20px;
@@ -188,9 +200,8 @@ nav a:hover {
 }
 
 @media (max-width: 600px) {
-  #title-text {
-    font-size: 40px; /* Even smaller font size for phones */
-  }
+
+  
   .buttons {
     display: none;
   }
@@ -200,6 +211,12 @@ nav a:hover {
   }
   .profile {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 300px) {
+  #title-text {
+    font-size: 40px; 
   }
 }
 
