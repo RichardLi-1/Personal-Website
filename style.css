@@ -339,3 +339,10 @@ nav a:hover {
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.round{
+  background-color: #98E8CD;
+  border-radius: 20%;
+  display:inline;
+  padding:5px;
+}

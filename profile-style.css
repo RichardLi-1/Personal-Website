@@ -1,0 +1,88 @@
+
+html{
+    overflow-x: hidden;
+    margin-left:0;
+    margin-bottom:0;
+}
+#profile-container {
+    display: flex;
+    max-width: 960px;
+    margin: 20px auto;
+    height:auto;
+    margin-top: 25vh;
+}
+
+#profile-photo {
+    flex: 1;
+    padding: 10px;
+}
+
+#profile-photo img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    border-radius: 10px;
+}
+
+#profile-info {
+    flex: 2;
+    padding: 10px;
+}
+
+#profile-info h2, #profile-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+#profile-info p {
+    color: #666;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 768px){
+    #profile-photo{
+        min-width: 400px;
+    }
+    .profile-info {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #profile-container {
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    #profile-photo, .profile-info {
+        flex: none;
+        padding: 10px;
+        width:auto;
+    }
+
+    .profile-info {
+        margin-left:20px;
+    }
+
+    #profile-photo img {
+        /* Adjust width of image to be responsive within the container */
+        width: 100%; /* Example percentage, adjust as necessary */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+@media (max-width: 500px){
+    .buttons {
+        display: none
+    }
+}
+
+/*Section Text*/
+.profile-text {
+    color:#EEE;
+    margin-bottom:0px;
+}
