@@ -7,7 +7,7 @@ function showSlides(n) {
 
     slideIndex = (n + numSlides) % numSlides;
 
-    slidesWrapper.style.transform = 'translateX(' + (-slideIndex * 33.33) + '%)';
+    slidesWrapper.style.transform = 'translateX(' + (-slideIndex * 100 / numSlides) + '%)';
 }
 
 function plusSlides(n) {
