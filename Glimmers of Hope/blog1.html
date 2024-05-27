@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glimmers of Hope</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<link href='style.css' rel='stylesheet'>
+<link href='profile-style.css' rel='stylesheet'>
+</head>
+
+<!------------------------ body of webpage ------------------------>
+<body>
+    <div id="head">
+        <div class="header-left">
+            <a href="index.html"><img id="logo" src="logo.jpg" alt="Logo"></a>
+            <h1 id="navbar-title">How Neurodivergent People Are Condemnned - Glimmers of Hope Blog</h1>
+        </div>
+        <nav>
+          <a class="buttons" href="#home">Home</a>
+          <a class="buttons" href="events.html">Events</a>
+          <a class="buttons" href="blog.html">Blog</a>
+          <a class="buttons" href="resources.html">Resources</a>
+          <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+            <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
+        </a>
+        <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+            <img class="buttons" src="instagram.png" alt="Instagram" style="max-height:17px;max-width:17px;margin: 0 0px;">
+        </a>
+          <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+        </nav>
+    </div>
+
+    <!-- Menu content -->
+    <div id="menu" onclick="toggleMenu()" class="menu-content">
+        <a href="#home" class="menu-item common-font">Home</a>
+        <a href="events.html" class="menu-item common-font">Events</a>
+        <a href="blog.html" class="menu-item common-font">Blog</a>
+        <a href="resources.html" class="menu-item common-font">Resources</a>
+        <div class="menu-item">
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="instagram.png" alt="Instagram" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- Top Image Area -->
+    <div class="sunset" id="home">
+        <h2 id="title-text">How Neurodivergent People Are Condemnned - Glimmers of Hope Blog</h2>
+    </div>
+    <div class="container2">
+        <!--Who are we?-->
+        <div id="about">
+            <h1 class="common-font headers"><br>Who Are We?</h1>
+            <p class="page-text" style="font-size:18px">Glimmers of Hope is a youth-led non-profit organization based in Markham, Ontario.</p>
+            <h3 class="page-text">Our Mission</h3>
+            <p class="page-text">During and after the COVID-19 pandemic, we have found that many youth in our community have been struggling with their mental health, many of which are unable to attend school. In addition, many are unable to access or afford support and many families are uneducated or hold stigmas against mental health. Glimmers of Hope was created to tackle these challenges by providing tailored support to youth in our community. Through fundraising events and educational opportunities, we aim to destigmatize mental health issues and provide youth with the tools and resources they need to cope with the challenges they are facing. We also aim to assist youth with their educational journey by providing local volunteer opportunities to fulfill their OSSD. <br><br></p>
+
+        </div>
+        <br>
+        <!------upcoming events------>
+        <div id="events">
+            <h1 class="common-font headers">Upcoming Events</h1>
+            <p class="page-text" style="font-size:18px">No upcoming events. Follow our social media so you don’t miss any updates!</p>
+           <p class="page-text"style="text-align:center; text-decoration:none;"><a href="events.html">Learn More</a></p>
+        </div>
+
+
+<div class="preload" style="display:none;">
+    <img src="mvmf.jpg">
+    <img src="decembersale.jpeg">
+    <img src="michelle-new.png">
+    <img src="richard-new.png">
+    <img src="360kids.png">
+</div>
+
+
+<footer id="includeHtml"></footer>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+        $("#includeHtml").load("footer.html");
+    });
+</script>

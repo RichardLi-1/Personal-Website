@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events - Glimmers of Hope</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<link href='style.css' rel='stylesheet'>
+<link href='profile-style.css' rel='stylesheet'>
+</head>
+
+<!------------------------ body of webpage ------------------------>
+<body>
+    <div id="head">
+        <div class="header-left">
+            <a href="index.html"><img id="logo" src="logo.jpg" alt="Logo"></a>
+            <h1 id="navbar-title">Events</h1>
+        </div>
+        <nav>
+          <a class="buttons" href="index.html">Home</a>
+          <a class="buttons" href="events.html">Events</a>
+          <a class="buttons" href="blog.html">Blog</a>
+          <a class="buttons" href="resources.html">Resources</a>
+          <a class="buttons" href="resources.html">Get Involved</a>
+          <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+            <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
+        </a>
+        <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+            <img class="buttons" src="instagram.png" alt="Instagram" style="max-height:17px;max-width:17px;margin: 0 0px;">
+        </a>
+          <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+        </nav>
+    </div>
+
+    <!-- Menu content -->
+    <div id="menu" onclick="toggleMenu()" class="menu-content">
+        <a href="index.html" class="menu-item common-font">Home</a>
+        <a href="events.html" class="menu-item common-font">Events</a>
+        <a href="blog.html" class="menu-item common-font">Blog</a>
+        <a href="resources.html" class="menu-item common-font">Resources</a>
+        <a href="getinvolved.html" class="menu-item common-font">Get Involved</a>
+        <div class="menu-item">
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+                <img class="social-icon" src="instagram.png" alt="Instagram" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- Top Image Area -->
+    <div class="sunset" id="home" style="background-image: url('mvmf-darkened.jpeg');">
+        <h2 id="title-text">EVENTS</h2>
+    </div>
+    <div class="container2">
+        <!--Who are we?-->
+        <div id="about">
+            <h1 class="common-font headers"><br>Partner With Us</h1>
+            <p class="page-text" style="font-size:18px">Glimmers of Hope is open to partnerships. Reach out to us at:</p>
+            <p class="page-text" style="font-size:18px">
+                <a href="mailto:richardli0+1@outlook.com?" style="text-decoration: none;" class="page-text">richardli0@outlook.com</a>
+        </div>
+        <br>
+        <!------upcoming events------>
+        <div id="events">
+            <h1 class="common-font headers">Upcoming Events</h1>
+            <p class="page-text" style="font-size:18px">No upcoming events. Follow our social media so you don’t miss any updates!<br><br></p>
+        </div>
+        
+        <div><h1 class="common-font headers">Previous Events</h1></div>
+
+        <section id="profile-container" style="margin-top:0px;">
+            <div id="profile-photo">
+              <img src="decembersale.jpeg">
+            </div>
+            <div class="profile-info" style="margin-right:20px;">
+              <h2 class = "common-font profile-text">Room for a Child Fundraiser</h2>
+              <p class="common-font" style="color:#AAA;">December 2023</p>
+              <p class="page-text profile-text"><br>Raised money for Room for a Child in partnership with Tote-Ally Yours</p>
+            </div>
+        </section>
+
+
+        <section id="profile-container" style="margin-top:0px;">
+            <div id="profile-photo">
+              <img src="mvmf.jpeg">
+            </div>
+            <div class="profile-info" style="margin-right:20px;">
+              <h2 class = "common-font profile-text">Markham Village Music Festival</h2>
+              <p class="common-font" style="color:#AAA;">September 2023</p>
+              <p class="page-text profile-text"><br>Raised over $100 to Room for a Child in partnership with Tote-Ally Yours</p>
+            </div>
+        </section>
+                        
+    </div>
+        
+        <br>
+</body>
+
+<footer id="includeHtml"></footer>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+        $("#includeHtml").load("footer.html");
+    });
+</script>

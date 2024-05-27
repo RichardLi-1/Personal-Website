@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glimmers of Hope</title>
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<link href='style.css' rel='stylesheet'>
+<link href='profile-style.css' rel='stylesheet'>
+</head>
+
+<!------------------------ body of webpage ------------------------>
+<body>
+    <div id="head">
+        <div class="header-left">
+            <img id="logo" src="logo.jpg" alt="Logo">
+            <h1 id="navbar-title">Glimmers of Hope</h1>
+        </div>
+        <nav>
+            <a class="buttons" href="#home">Home</a>
+            <a class="buttons" href="events.html">Events</a>
+            <a class="buttons" href="blog.html">Blog</a>
+            <a class="buttons" href="resources.html">Resources</a>
+            <a class="buttons" href="getinvolved.html">Get Involved</a>
+          <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+            <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
+        </a>
+        <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+            <img class="buttons" src="instagram.png" alt="Instagram" style="max-height:17px;max-width:17px;margin: 0 0px;">
+        </a>
+        <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+        </nav>
+    </div>
+
+    <!-- Menu content -->
+    <div id="menu" onclick="toggleMenu()" class="menu-content">
+        <a href="#home" class="menu-item common-font">Home</a>
+        <a href="events.html" class="menu-item common-font">Events</a>
+        <a href="blog.html" class="menu-item common-font">Blog</a>
+        <a href="resources.html" class="menu-item common-font">Resources</a>
+        <a href="getinvolved.html" class="menu-item common-font">Get Involved</a>
+        <div class="menu-item">
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+            <a href="https://www.instagram.com/glimmerssofhope/" target="_blank" rel="noopener noreferrer">
+                <img src="instagram.png" alt="Instagram" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- Top Image Area -->
+    <div class="sunset" id="home">
+        <h2 id="title-text">GLIMMERS OF HOPE</h2>
+    </div>
+    <div class="container2">
+        <!--Who are we?-->
+        <div id="about">
+            <h1 class="common-font headers"><br>Who Are We?</h1>
+            <p class="page-text" style="font-size:18px">Glimmers of Hope is a youth-led non-profit organization based in Markham, Ontario.</p>
+            <p class="page-text">During and after the COVID-19 pandemic, we have found that many youth in our community have been struggling with their mental health, many of which are unable to attend school. In addition, many are unable to access or afford support and many families are uneducated or hold stigmas against mental health. Glimmers of Hope was created to tackle these challenges by providing tailored support to youth in our community.<br><br></p>
+            <section id="profile-container" style="margin-top:0;">
+                <div id="profile-photo">
+                <h2 class = "common-font profile-text" style="font-size:40px;display:inline-block;">Our<br>Mission</h2>
+                  <img style="margin-top:30px;" src="ourmission.png">
+                </div>
+                <div class="profile-info" style="margin-right:20px;">
+
+                    <div>
+                        <h3 class="common-font" style="color:#AAA;font-size:30px;display:inline-block;margin-bottom:0px;">01</h3><h2 class="page-text" style="margin-left:10px;font-size:30px;display:inline-block;margin-bottom:0px;">Fundraising</h2>
+                        <p class="page-text">Fundraising to local charities that support youth and mental health, such as Room for a Child and 360Kids.</p>
+                    </div>
+                    <div>
+                        <h3 class="common-font" style="color:#AAA;font-size:30px;display:inline-block;margin-bottom:0px;">02</h3><h2 class="page-text" style="margin-left:10px;font-size:30px;display:inline-block;margin-bottom:0px;">Educational Events</h2>
+                        <p class="page-text">Through fundraising events and educational opportunities, we aim to destigmatize mental health issues and provide youth with the tools and resources they need to cope with the challenges they are facing.</p>
+                    </div>
+                    <div>
+                        <h3 class="common-font" style="color:#AAA;font-size:30px;display:inline-block;margin-bottom:0px;">03</h3><h2 class="page-text" style="margin-left:10px;font-size:30px;display:inline-block;margin-bottom:0px;">Volunteering</h2>
+                        <p class="page-text">We aim to assist youth with their educational journey by providing local volunteer opportunities to fulfill their OSSD</p>
+                    </div>
+                </div>
+              </section>
+        </div>
+        <br>
+        <!------upcoming events------>
+        <div id="events">
+            <h1 class="common-font headers">Upcoming Events</h1>
+            <p class="page-text" style="font-size:18px">More events coming soon. Follow our social media so you don’t miss any updates!</p>
+           <p class="page-text"style="text-align:center; text-decoration:none;"><a href="events.html">See our past events</a></p>
+        </div>
+        <!---<section id="profile-container" style="margin-top:0px;">
+            <div id="profile-photo">
+              <img src="market.jpeg">
+            </div>
+            <div class="profile-info" style="margin-right:20px;">
+              <a src="https://www.360kids.ca/"><h2 class = "common-font" style=" color:#EEE;">Markham Village Farmers Market</h2></a>
+              <p class="common-font" style="color:#AAA;">July-September 2024<br>132 Robinson Street</p>
+              <p class="page-text" style="color:#EEE;"><br>Find Glimmers of Hope at the Markham Village Farmers Market this summer!</p>
+            </div>
+        </section>
+                            --->
+
+        <!-----meet the team----->
+        <div id="team">
+            <title>Meet the Team</title>
+            <br>
+            <div class="team-section">
+                <h1 class="common-font headers">Meet the Team</h1>
+                <!--<div class="profile">
+                    <a href="richard.html"><img src="richard-old.jpg" alt="Profile Picture of Richard Li"></a>
+                    <div class="profile-name page-text">Richard Li</div>
+                    <div class="profile-social"><a href="https://www.instagram.com/_transitfanner" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color:#AAAAAA">@_transitfanner</a></div>
+                </div>--->
+                <div class="profile">
+                    <a href="michelle.html"><img src="michelle-new.png" alt="Profile Picture of Michelle Matthew"></a>
+                    <div class="profile-name page-text">Michelle Matthew</div>
+                    <div class="profile-social"><a href="https://www.instagram.com/miichelle.jm" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color:#AAAAAA">@miichelle.jm</a></div>
+                </div>
+                <div class="profile">
+                    <a href="elisa.html"><img src="" alt=""></a>
+                    <div class="profile-name page-text">Elisa Tang</div>
+                    <div class="profile-social"><a href="https://www.instagram.com/elisatangg/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color:#AAAAAA">@elisatangg</a></div>
+                </div>
+                <div class="profile" style="margin-bottom: 0px;">
+                    <a href="maggie.html"><img src="maggie.jpg" alt="Profile Picture of Maggie Lee"></a>
+                    <div class="profile-name page-text">Maggie Lee - HBA</div>
+                    <div class="profile-social"><a href="https://www.instagram.com/maggie.lee_" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color:#AAAAAA">@maggie.lee_</a></div>
+                </div>
+            </div>
+        </div>
+        <!-----contact----->
+        <div id="contact">
+            
+            <section id="profile-container" style="margin-top:0;">
+                <div id="profile-photo">
+                <h2 class = "common-font profile-text" style="font-size:40px;display:inline-block;">Let's Work Together.</h2>
+                  <img style="margin-top:30px;" src="letsworktogether.png">
+                </div>
+                <div class="profile-info" style="margin-right:20px;">
+
+                    <div>
+                        <h2 class = "common-font profile-text" style="font-size:20px;display:inline-block;"><br><br><br><br><br>Email Address</h2>
+                        <p class="page-text" style="font-size:18px">
+                            <a href="mailto:richardli0+1@outlook.com?" style="text-decoration: none;" class="page-text">richardli0@outlook.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class = "common-font profile-text" style="font-size:20px;display:inline-block;"><br>Phone Number</h2>
+                        <p class="page-text" style="font-size:18px">416-529-3579</p>
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+              </section>
+        </div>
+    </div>
+</body>
+
+<div class="preload" style="display:none;">
+    <img src="mvmf.jpg">
+    <img src="decembersale.jpeg">
+    <img src="360kids.png">
+    <img src="mvmf-darkened.jpeg">
+</div>
+
+
+<footer id="includeHtml"></footer>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+        $("#includeHtml").load("footer.html");
+    });
+</script>
