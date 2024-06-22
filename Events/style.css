@@ -1,0 +1,344 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');*/
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('Neue\ Machina/NeueMachina-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  /*background-color: #FCFCFC;*/
+  background-color: #111111;
+}
+
+.common-font {
+  font-family: Neue Machina;
+}
+
+.accent{
+  color:#98E8CD;
+}
+
+#head {
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 30px;
+  width: 30px;
+  border-radius: 10%;
+  margin-right: 15px;
+}
+
+#navbar-title {
+  color: #EEEEEE;
+  opacity: 0; /* Start with the title invisible */
+  transition: opacity 0.15s ease-in-out; /* Smooth transition */
+  font-family: Helvetica;
+  margin: 0;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #666666;
+  margin-left: 15px;
+}
+
+nav a:hover {
+  filter: brightness(80%);
+}
+
+.buttons {
+  color: #EEEEEE;
+  font-family: Neue Machina;
+  font-weight: bold;
+  margin-left: 16px;
+}
+
+.actualbutton {
+  color: #000000;
+  background-color: #E8C7FF;
+  font-family: Neue Machina;
+  font-weight: light;
+  margin-left: 16px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.actualbutton:hover{
+  background-color: #E2BBFF;
+}
+
+.actualbutton:active{
+  background-color: #D79FFF;
+}
+
+/*----------------------Sunset Photo and Below---------------------*/
+
+.page-text {
+  font-family: Neue Machina;
+  color: #E0E0E0;
+}
+
+
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Padding for better readability */
+  background-color: #111111;
+}
+
+#title-text {
+  text-align: center;
+  display:inline;
+  font-family: Neue Machina;
+  font-size: 60px;
+  margin-left:12px;
+  margin-right:12px;
+  letter-spacing: 7px;
+  opacity: 100; /* Title is initially visible */
+  transition: opacity 0.15s ease-in-out; /* Smooth transition for the fade in and out */
+}
+
+.sunset {
+  display: flex;
+  height: 72vh;
+  max-height: 800px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-image: url('tree.jpeg');
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed; /* can be removed once the parallax effect is purely JavaScript driven */
+}
+
+@media (prefers-color-scheme: light) {
+  .sunset {
+    filter: brightness(115%);
+  }
+}
+
+.headers {
+  text-align: center;
+  color: white;
+}
+
+
+/*----------------------Footer----------------------*/
+.social-icon {
+  max-width: 44px;
+  max-height: 44px;
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+
+/*----------------Mobile Optimization----------------*/
+.mobile-only{
+  display: none;
+}
+
+
+#title-container {
+  display:flex;
+}
+@media (max-width: 768px) {
+  #title-container {
+    flex-direction: column;
+}
+
+  #title-text {
+    font-size: 50px; /* Smaller font size for small devices */
+    margin:0px;
+  }
+  .container2 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  
+  .buttons {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline;
+  }
+  .profile {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 300px) {
+  #title-text {
+    font-size: 40px; 
+  }
+}
+
+/*Mobile Menu*/
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
+
+.menu-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Translucent black background */
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  color: white;
+  font-size: 32px;
+  padding: 20px;
+  text-decoration: none;
+  opacity: 0;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.show {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show .menu-item {
+  animation: fadeIn 0.5s ease forwards;
+}
+.show .menu-item:nth-child(1) { animation-delay: 0.15s; }
+.show .menu-item:nth-child(2) { animation-delay: 0.3s; }
+.show .menu-item:nth-child(3) { animation-delay: 0.45s; }
+.show .menu-item:nth-child(4) { animation-delay: 0.6s; }
+.show .menu-item:nth-child(5) { animation-delay: 0.75s; }
+.show .menu-item:nth-child(6) { animation-delay: 0.9s; }
+
+.profile-text {
+  color: #EEE;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slide img {
+  max-width:20vw;
+  height:auto;
+}
+
+.slide-content {
+  width: 100%;
+}
+
+.slide-content img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.round{
+  background-color: #98E8CD;
+  border-radius: 20%;
+  display:inline;
+  padding:5px;
+  margin-right:5px;
+}
