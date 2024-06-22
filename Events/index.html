@@ -10,38 +10,13 @@
 </head>
 <body>
     <div id="head">
-        <div class="header-left">
-            <img id="logo" src="logo.png" alt="Logo">
-            <h1 id="navbar-title">Richard Li</h1>
-        </div>
-        <nav>
-            <a class="buttons" href="/../">Home</a>
-            <a class="buttons" href="photos.html">Photos</a>
-            <a class="buttons" href="projects.html">Projects</a>
-            <a href="https://www.linkedin.com/in/richardli0/" target="_blank" rel="noopener noreferrer">
-                <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
-            </a>
-            <a href="https://github.com/RichardLi-1" target="_blank" rel="noopener noreferrer">
-                <img class="buttons" src="github.png" alt="Github" style="max-height:17px;max-width:17px;margin: 0 0px;">
-            </a>
-            <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
-        </nav>
     </div>
+    <script>
+        $(function() {
+            $("#includeHtml").load("header.html");
+        });
+    </script>
 
-    <!-- Menu content -->
-    <div id="menu" onclick="toggleMenu()" class="menu-content">
-        <a href="index.html" class="menu-item common-font">Home</a>
-        <a href="photos.html" class="menu-item common-font">Photos</a>
-        <a href="projects.html" class="menu-item common-font">Projects</a>
-        <div class="menu-item">
-            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
-                <img src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
-            </a>
-            <a href="https://github.com/RichardLi-1" target="_blank" rel="noopener noreferrer">
-                <img src="github.png" alt="GitHub" style="max-height:30px;max-width:30px;margin: 0 0px;">
-            </a>
-        </div>
-    </div>
 
     <!-- Top Image Area -->
     <section id="profile-container">
@@ -54,8 +29,6 @@
             <img class="buttons" src="github.png" alt="Github Link" style="display:inline;max-height:16px;max-width:16px;margin: 0 0px;">
           </a>
           <h3 class="common-font" style="color:#AAA";>Event Organizer</h3>
-          <p class="round common-font">2021</p>
-          <p class="common-font profile-text" style="font-size:20px;">Hypothetical transit map for the GTA<br>
           </p>
         </div>
       </section>
@@ -85,6 +58,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(function() {
-        $("#includeHtml").load("footer.html");
+        $("#includeHtml").load("/../footer.html");
     });
 </script>
