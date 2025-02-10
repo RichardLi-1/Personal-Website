@@ -285,6 +285,10 @@ nav a:hover {
   transition: transform 0.5s ease-in-out;
 }
 
+.slides-update {
+  display: flex;
+}
+
 .slide {
   min-width: 33.33%;
   box-sizing: border-box;
