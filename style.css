@@ -129,7 +129,7 @@ nav a:hover {
 
 .sunset {
   display: flex;
-  height: 67vh;
+  height: 62vh;/*previously 67*/
   max-height: 800px;
   width: 100%;
   align-items: center;
