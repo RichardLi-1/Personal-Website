@@ -1,8 +1,15 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');*/
 
 @font-face {
-  font-family: 'Neue Machina';
+  font-family: 'Neue Machina Real';
   src: url('Neue\ Machina/NeueMachina-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +19,7 @@ html, body {
   overflow-x: hidden;
   margin: 0;
   /*background-color: #FCFCFC;*/
-  background-color: #111111;
+  background-color: #f5f6f8;
 }
 
 .common-font {
@@ -20,7 +27,8 @@ html, body {
 }
 
 .accent{
-  color:#98E8CD;
+  color:#9b2429;
+  font-size: 24px;
 }
 
 #head {
@@ -55,7 +63,7 @@ html, body {
   transition: opacity 0.15s ease-in-out; /* Smooth transition */
   font-family: Helvetica;
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 nav {
@@ -104,7 +112,8 @@ nav a:hover {
 
 .page-text {
   font-family: Neue Machina;
-  color: #E0E0E0;
+  color: #000000;
+  font-size: 19px;
 }
 
 
@@ -112,7 +121,7 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto; /* Center the container horizontally */
   padding: 0 20px; /* Padding for better readability */
-  background-color: #111111;
+  background-color: #f5f6f8;
 }
 
 #title-text {
@@ -129,12 +138,12 @@ nav a:hover {
 
 .sunset {
   display: flex;
-  height: 62vh;/*previously 67*/
+  height: 55vh;/*previously 62 and previously 67*/
   max-height: 800px;
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-image: url('tree.jpeg');
+  background-image: url('seven.png');
   background-size: cover;
   background-position: top;
   background-attachment: fixed; /* can be removed once the parallax effect is purely JavaScript driven */
