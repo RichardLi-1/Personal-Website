@@ -12,10 +12,18 @@ html{
     margin-top: 25vh;
 }
 
+#profile-container-without-top {
+    display: flex;
+    max-width: 60vw;
+    margin: 20px auto;
+    height:auto;
+}
+
 #profile-photo {
     flex: 1;
     padding: 10px;
 }
+
 
 #profile-photo img {
     width: 100%; /* Make the image responsive */
