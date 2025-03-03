@@ -21,6 +21,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Georgia';
+  src: url('georgia-2/georgia.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -118,6 +125,12 @@ nav a:hover {
 /*----------------------Sunset Photo and Below---------------------*/
 
 .page-text {
+  font-family: Neue Machina;
+  color: #000000;
+  font-size: 19px;
+}
+
+.blog-text {
   font-family: Neue Machina;
   color: #000000;
   font-size: 19px;
@@ -387,4 +400,14 @@ nav a:hover {
   display:inline;
   padding:5px;
   margin-right:5px;
+}
+
+
+.link-list {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep text color consistent */
+}
+
+.link-list:hover {
+    text-decoration: underline; /* Ensure underline doesn't appear on hover */
 }
