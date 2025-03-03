@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toronto Transit is Doomed - Richard Li Blog</title>
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <link href="profile-style.css" rel="stylesheet">
+</head>
+<body>
+    <!--<div id="head">
+        <div class="header-left">
+            <img id="logo" src="logo.png" alt="Logo">
+            <h1 id="navbar-title">Richard Li</h1>
+        </div>
+        <nav>
+            <a class="buttons" href="/../">Home</a>
+            <a class="buttons" href="photos.html">Photos</a>
+            <a class="buttons" href="https://www.lirichard.io/projects">Projects</a>
+            <a href="https://www.linkedin.com/in/richardli0/" target="_blank" rel="noopener noreferrer">
+                <img class="buttons" src="linkedin.jpeg" alt="LinkedIn" style="max-height:16px;max-width:16px;margin: 0 0px;">
+            </a>
+            <a href="https://github.com/RichardLi-1" target="_blank" rel="noopener noreferrer">
+                <img class="buttons" src="github.png" alt="Github" style="max-height:17px;max-width:17px;margin: 0 0px;">
+            </a>
+            <img src="menu.png" onclick="toggleMenu()" class="social-icon mobile-only">
+        </nav>
+    </div>-->
+
+    <!-- Menu content 
+    <div id="menu" onclick="toggleMenu()" class="menu-content">
+        <a href="index.html" class="menu-item common-font">Home</a>
+        <a href="photos.html" class="menu-item common-font">Photos</a>
+        <a href="projects.html" class="menu-item common-font">Projects</a>
+        <div class="menu-item">
+            <a href="https://www.linkedin.com/company/100954304" target="_blank" rel="noopener noreferrer">
+                <img src="linkedin.jpeg" alt="LinkedIn" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+            <a href="https://github.com/RichardLi-1" target="_blank" rel="noopener noreferrer">
+                <img src="github.png" alt="GitHub" style="max-height:30px;max-width:30px;margin: 0 0px;">
+            </a>
+        </div>
+    </div>-->
+
+    <!-- Top Image Area -->
+    <div class="sunset" id="home">
+        <div id="title-container">
+        <h2 id="title-text" class="page-text" style="text-align: center;"></h2><h2 style="text-align: center;" id="title-text" class="accent"></h2>
+    
+        </div>
+    </div>
+    
+
+    <div class="container2">
+        <h1 style="font-family: 'Glacial Indifference Bold;">Blogs</h1>
+        
+        <a href="future.html"><p class="page-text">
+            Toronto Transit is Doomed
+        </p></a>
+
+        <a href="index.html"><p class="page-text">
+            Home
+        </p></a>
+
+    </div>
+
+    <footer id="includeHtml"></footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(function() {
+            $("#includeHtml").load("footer.html");
+        });
+    </script>
+
+<!--<div class="preload">
+    <img style="width:0px;height:0px;" src="photo1.png"></div>
+    <img style="width:0px;height:0px;" src="photo2.png"></div>
+    <img style="width:0px;height:0px;" src="photo3.png"></div>
+    <img style="width:0px;height:0px;" src="photo4.JPG"></div>
+    <img style="width:0px;height:0px;" src="photo5.png"></div>
+    <img style="width:0px;height:0px;" src="photo6.png"></div>
+</div>-->
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+        $("#includeHtml").load("footer.html");
+    });
+</script>
+
+<script>
+    const container = document.querySelector('.slideshow-container');
+    const slideWidth = 300 + 10;
+  
+    document.querySelector('.next').addEventListener('click', () => {
+      container.scrollBy({ left: slideWidth, behavior: 'smooth' });
+    });
+  
+    document.querySelector('.prev').addEventListener('click', () => {
+      container.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+    });
+  </script>
