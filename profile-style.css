@@ -67,6 +67,11 @@ body {
         flex-direction: column;
     }
 
+    #profile-container-without-top {
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
     #profile-photo, .profile-info {
         flex: none;
         padding: 10px;

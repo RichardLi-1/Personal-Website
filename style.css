@@ -411,3 +411,40 @@ nav a:hover {
 .link-list:hover {
     text-decoration: underline; /* Ensure underline doesn't appear on hover */
 }
+
+
+@media (max-width: 768px) {
+  .profile-info {
+      width: 100%;
+      min-width: unset;
+      margin-right: 0;
+  }
+
+  .slides-update {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .slide {
+      width: 100%; /* Makes slides full-width on mobile */
+      max-width: 300px; /* Prevents them from being too large */
+      margin-bottom: 10px;
+  }
+
+  .slide img {
+      max-width: 100%;
+      height: auto; /* Prevents distortion */
+  }
+}
+
+.home-profile {
+  width: 100%; /* Ensure it takes full width */
+  max-width: 100%; /* Prevent unnecessary shrinking */
+  min-width: 200px; /* Prevent text from becoming too narrow */
+  margin: 0 auto; /* Center the text */
+  text-align: left; /* Improve readability */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
