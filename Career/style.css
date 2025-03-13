@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'Glacial Indifference Bold';
+    src: url('glacial-indifference/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Glacial Indifference';
+    src: url('glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #05052E; /* Dark navy background */
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px; /* Limit width */
+    margin: 0 auto; /* Center it */
+    padding: 20px 40px; /* Slightly increase padding */
+    background-color: #05052E;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Increase size */
+    height: 50px;
+    margin-right: 12px;
+}
+
+.title {
+    color: white;
+    font-size: 24px; /* Slightly bigger */
+    font-weight: bold;
+}
+
+.login {
+    font-size: 20px; /* Slightly bigger */
+}
+
+.login:hover {
+    opacity: 0.7;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    max-width: 1250px; /* Limit width */
+    margin: 0 auto; /* Center it */
+    padding: 40px 30px; /* Increase padding */
+    background-color: #0B0A2B;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero .highlight {
+    font-weight: bold;
+    /*font-style: italic;*/
+}
+
+.hero p {
+    font-size: 20px;
+    color: #CFCFCF; /* Light gray text */
+    margin-bottom: 40px;
+}
+
+/* Gradient Button */
+.cta-button {
+    display: inline-block;
+    font-size: 20px; /* Increase text size */
+    padding: 16px 50px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #A238B6, #3E348D);
+    transition: opacity 0.3s ease;
+}
+
+.cta-button:hover {
+    opacity: 0.8;
+}
+
+/* Carousel Wrapper */
+.carousel {
+    max-width: 2000px; /* Set a reasonable max width */
+    margin: 50px auto; /* Center it */
+    overflow: hidden;
+    padding: 0px 0;
+}
+
+@media (max-width: 900px) {
+    .carousel-image img {
+        max-height: 180px; /* Shrinks image height */
+        width: auto; /* Maintains aspect ratio */
+    }
+    .carousel {
+        padding: 0px 0;
+        margin: 20px auto; /* Center it */
+    }
+}
+
+/* Image Container */
+.carousel-image {
+    width: 100%;
+    height: 250px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image Styling */
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space while keeping its aspect ratio */
+    border-radius: 15px;
+}
+
+/* Shape transition from dark to white */
+.transition-section {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Controls the height of the curve */
+    background-color: white;
+}
+
+.transition-section::before {
+    content: "";
+    position: absolute;
+    top: -50px; /* Moves the curve into position */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust for a smoother curve */
+    background-color: #0B0A2B;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Next Section */
+.next-section {
+    background-color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Large Heading */
+.next-section h1 {
+    font-size: 64px; /* Bigger than earlier */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 40px;
+}
+
+/* Next Section Button */
+.next-button {
+    display: inline-block;
+    font-size: 24px; /* Larger text */
+    font-weight: bold;
+    padding: 20px 60px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #A238B6, #3E348D);
+    transition: opacity 0.3s ease;
+}
+
+.next-button:hover {
+    opacity: 0.8;
+}
+
+/* Footer Base Styles */
+.footer {
+    background-color: #05052E; /* Your dark navy */
+    color: white;
+    padding: 50px 80px;
+    position: relative;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+/* Flexbox for Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Side: Logo & Email Form */
+.footer-left {
+    max-width: 500px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.email-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+}
+
+.email-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.demo-button {
+    background: linear-gradient(90deg, #A238B6, #3E348D);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.demo-button:hover {
+    opacity: 0.8;
+}
+
+/* Right Side: Company Links */
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 8px;
+}
+
+.footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-right ul li a:hover {
+    opacity: 1;
+}
+
+/* Bottom Section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Added bottom border */
+    position: relative;
+}
+
+/* Large Transparent Text */
+.footer-overlay {
+    position: absolute;
+    bottom: -20px; /* Adjusted to align better */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 150px; /* Slightly larger for better proportion */
+    font-weight: bold;
+    opacity: 0.1;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+
+/* Terms & Privacy Links */
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    opacity: 0.7;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+
+/* Add these styles to your existing CSS */
+
+.terms-of-use {
+    font-family: 'Glacial Indifference', sans-serif; /* Apply Glacial Indifference font */
+    font-size: 18px;  /* Adjust font size as needed */
+    line-height: 1.6; /* Set line height for readability */
+    color: #333; /* Set the text color */
+    background-color: white;
+    align-items: center;
+    padding: 0px 20px;
+    max-width: 1250px;
+  }
+  
+  .terms-of-use h1, .terms-of-use h2 {
+    font-family: 'Glacial Indifference Bold', sans-serif; /* Apply bold version for headings */
+    font-size: 24px; /* Slightly larger font size for headings */
+    margin-bottom: 15px;
+  }
+  
+  .terms-of-use a {
+    color: #9b2429; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .terms-of-use a:hover {
+    text-decoration: underline; /* Underline links on hover */
+  }
+  
+  .whitebg{
+    background-color: white;
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }

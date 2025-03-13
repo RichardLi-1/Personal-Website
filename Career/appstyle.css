@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
+}
+
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Header */
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* Left Section: Logo + Greeting */
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevents it from resizing */
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Greeting */
+.greeting-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Centered Navigation */
+.nav-container {
+    flex: 1; /* Takes up the remaining space to center */
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Glacial Indifference;
+    font-size: 18px;
+}
+
+.nav-button:hover {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
+}
+
+/* General Layout */
+body {
+    font-family: 'Glacial Indifference', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.app-container {
+    display: flex;
+    width: 100%;
+    max-width: 95vw;
+}
+
+/* Sidebar */
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    gap: 10px;
+}
+
+.list-button.active {
+    background: white;
+    border: 2px solid #d4aaff;
+}
+
+/* Task Section */
+.task-container {
+    flex-grow: 1;
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 220px); /* Make it take full height */
+    min-height: 400px;
+    overflow-y: auto; /* Enable scrolling */
+    position: relative; /* Keep relative for absolute positioning */
+    justify-content: flex-start; /* Ensure tasks are aligned at the top */
+}
+
+#task-list {
+    flex-grow: 1;
+    overflow-y: auto; /* Allow tasks to scroll */
+    padding-bottom: 60px; /* Space for the add button */
+    display: flex;
+    flex-direction: column;
+}
+
+.list-button, .add-list {
+    background: linear-gradient(to right, #f8e2f0, #e5e7fa);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Glacial Indifference;
+}
+
+.add-list {
+    background: none;
+    color: #aaa;
+    font-weight: normal;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensures text stays to the left */
+    background: linear-gradient(to right, #f8e2f0, #e5e7fa);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    gap: 10px; /* Adds spacing between circle & text */
+}
+
+.task .circle {
+    font-size: 20px;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.task .task-text {
+    flex-grow: 1; /* Makes the text take remaining space */
+    text-align: left; /* Forces text to align left */
+    white-space: nowrap; /* Ensures the text doesn’t wrap weirdly */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Keeps text trimmed if too long */
+}
+
+.task span {
+    flex-grow: 1; /* Ensures the text stays in place */
+    text-align: left; /* Keep text aligned to the left */
+}
+
+.add-task {
+    background: linear-gradient(to right, #f8e2f0, #e5e7fa);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto; /* Pushes button to the bottom */
+    width: 100%; /* Stretch to full width */
+}
+
+.add-task:hover {
+    background: linear-gradient(to right, #f3d0ea, #d9d9f3);
+}
+
+/* Input field for task */
+.task-input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 80%;
+    outline: none;
+}
+
+/* Enter button */
+.enter-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background-color: #d4aaff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.enter-button:hover {
+    background-color: #b985e6;
+}
+
+/* Input box & button layout */
+.task-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Task Item */
+.task {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #f8e2f0, #e5e7fa);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+/* Circle (Delete Button) */
+.circle {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.circle:hover {
+    color: #ff4d4d; /* Turns red when hovered */
+}
+
+/* Settings Button */
+.settings-container {
+    position: relative;
+    margin-left: auto; /* Push to right */
+}
+
+.settings-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.settings-button.rotated {
+    transform: rotate(90deg);
+}
+
+/* Settings Dropdown */
+.settings-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+}
+
+.settings-menu button {
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.settings-menu button:hover {
+    background: #f0f0f0;
+}
+
+#logout-btn{
+    font-family: Glacial Indifference;
+    width: 100px;
+}
+
+/* Right-Click List Menu */
+.list-menu {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+.list-menu button {
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.list-menu button:hover {
+    background: #f0f0f0;
+}

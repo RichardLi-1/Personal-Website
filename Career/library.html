@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ffcareersfavicon.svg" type="image/x-icon">
+    <title>FF Careers</title>
+    <link rel="stylesheet" href="appstyle.css">
+</head>
+
+<script>
+    import { auth } from "./firebase.js";
+    import { onAuthStateChanged } from "firebase/auth";
+
+    onAuthStateChanged(auth, (user) => {
+        if (!user) {
+            // Redirect to login if not signed in
+            window.location.href = "login.html";
+        }
+    });
+</script>
+
+<script type="module" src="appcode.js"></script>
+
+<!-- ✅ Load Your Firebase & Auth Scripts -->
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="greeting-container">
+                <p class="greeting">Good Afternoon,</p>
+                <p class="name">Richard!</p>
+            </div>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <button class="nav-button" onclick="window.location.href='dashboard.html';">Dashboard</button>
+                <button class="nav-button" onclick="window.location.href='app.html';"">To Do</button>
+                <button class="nav-button" style="text-decoration: underline;" onclick="window.location.href='library.html';">Career Library</button>
+            </nav>
+        </div>
+    </header>
+
+    
+    <!-- Main UI -->
+    <div class="app-container">
+        
+    </div>
+
+    <script src="appcode.js"></script>
+    </body>
+  </html>
+
