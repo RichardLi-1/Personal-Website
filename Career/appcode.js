@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     let lists = [
-        ["Brainstorm icebreaker ideas for team kickoff meeting",
-         "Create agenda for hackathon",
-         "Complete quantum numbers homework"],
+        ["Complete analysis on 2025 election",
+         "Brainstorm ideas for political rhetoric essay",
+         "Complete Trump discussion post"],
 
         ["Review meeting notes",
          "Plan next week's schedule"]
