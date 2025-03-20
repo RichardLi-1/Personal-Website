@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="background-color: white;">
-  <script type="module" src="firebase.js"></script>
-<script type="module" src="auth.js"></script>
     <a href="index.html" style="text-decoration: none;">
         <header class="navbar" style="background-color: white;">
             <div class="logo">
@@ -22,11 +20,13 @@
         </header>
         </a>
     <!-- ✅ Load Your Firebase & Auth Scripts -->
-
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
 
 <section class="hero" style="background-color: white;">
     <h2 style="color:black">Sign into Future Forward Careers</h2>
 
+    <a href="app.html">
     <button class="gsi-material-button" id="login">
         <div class="gsi-material-button-state"></div>
         <div class="gsi-material-button-content-wrapper">
@@ -46,6 +46,7 @@
     <p style="font-size: 12px; color:#BBB;">By signing in, you agree to the <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a></p>
 
     <button id="logout" style="display:none;">Sign Out</button>
+  </a>
 </section>
 
 </body>

@@ -1,201 +1,59 @@
-import { auth, db } from "./firebase.js";
-import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
-// ✅ Auto logout redirect if not logged in
-onAuthStateChanged(auth, (user) => {
-    if (!user) {
-        console.log("🔴 No user found. Redirecting to login...");
-        window.location.href = "login.html"; 
-    } else {
-        console.log("✅ User logged in:", user.displayName);
-        const userNameDisplay = document.getElementById("user-name");
-        const logoImage = document.querySelector(".logo");
-
-        if (user.photoURL && logoImage) {
-            logoImage.src = user.photoURL; // Replace logo.png with user's Google profile picture
-        }
-
-        if (userNameDisplay) {
-            userNameDisplay.textContent = user.displayName || "User";
-        }
-    }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
-    const popup = document.getElementById("rating-popup");
-    if (popup) popup.style.display = "none"; // Ensure popup is hidden initially
+    let lists = [
+        ["Complete analysis on 2025 election",
+         "Brainstorm ideas for political rhetoric essay",
+         "Complete Trump discussion post"],
 
-    const settingsBtn = document.getElementById("settings-btn");
-    const settingsMenu = document.getElementById("settings-menu");
+        ["Review meeting notes",
+         "Plan next week's schedule"]
+    ];
 
-    if (settingsBtn && settingsMenu) {
-        settingsBtn.addEventListener("click", (event) => {
-            event.stopPropagation();
-            settingsMenu.style.display = settingsMenu.style.display === "block" ? "none" : "block";
-            settingsBtn.classList.toggle("rotated");
-        });
-
-        document.addEventListener("click", (event) => {
-            if (!settingsBtn.contains(event.target) && !settingsMenu.contains(event.target)) {
-                settingsMenu.style.display = "none";
-                settingsBtn.classList.remove("rotated");
-            }
-        });
-    }
-
-    const deleteListBtn = document.getElementById("delete-list-btn");
-const listMenu = document.getElementById("list-menu");
-let selectedListElement = null; // Track right-clicked list element
-
-// ✅ Show the right-click menu when a list is right-clicked
-document.addEventListener("contextmenu", (event) => {
-    if (event.target.classList.contains("list-button")) {
-        event.preventDefault();
-        selectedListElement = event.target;
-
-        // Position the menu near the cursor
-        listMenu.style.top = `${event.clientY}px`;
-        listMenu.style.left = `${event.clientX}px`;
-        listMenu.style.display = "block";
-    }
-});
-
-// ✅ Hide menu when clicking outside
-document.addEventListener("click", (event) => {
-    if (!listMenu.contains(event.target)) {
-        listMenu.style.display = "none";
-    }
-});
-
-// ✅ Handle the delete button inside the right-click menu
-if (deleteListBtn) {
-    deleteListBtn.addEventListener("click", () => {
-        if (selectedListElement) {
-            const listName = selectedListElement.textContent;
-            if (Object.keys(lists).length === 1) {
-                alert("You must have at least one list!");
-                return;
-            }
-
-            delete lists[listName];
-            saveListsToLocalStorage();
-
-            // ✅ Hide menu after deleting the list
-            listMenu.style.display = "none";
-
-            // Switch to the first available list
-            currentListName = Object.keys(lists)[0];
-            loadLists();
-            loadTasks();
-        }
-    });
-}
-
-    const logoutBtn = document.getElementById("logout-btn");
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", () => {
-            signOut(auth).then(() => {
-                console.log("✅ User signed out. Redirecting...");
-                window.location.href = "login.html";
-            }).catch((error) => console.error("❌ Error signing out:", error.message));
-        });
-    }
-
-    // ✅ Load lists and tasks from localStorage
-    let lists = JSON.parse(localStorage.getItem("taskLists")) || {
-        "To Do": ["Brainstorm icebreaker ideas", "Create hackathon agenda", "Complete physics homework"],
-        "List 2": ["Review meeting notes", "Plan next week's schedule"]
-    };
-    
-    let currentListName = Object.keys(lists)[0] || "To Do"; // Default to first list
+    let currentListIndex = 0;
+    let selectedListElement = null; // Track the right-clicked list
 
     const taskList = document.getElementById("task-list");
     const sidebar = document.getElementById("sidebar");
-
-    function saveListsToLocalStorage() {
-        localStorage.setItem("taskLists", JSON.stringify(lists));
-    }
-
-    function loadLists() {
-        sidebar.innerHTML = ""; // Clear sidebar before reloading
-    
-        Object.keys(lists).forEach((listName, index) => {
-            const listButton = document.createElement("button");
-            listButton.classList.add("list-button");
-            listButton.textContent = listName;
-            listButton.onclick = () => selectList(listName);
-    
-            if (listName === currentListName) {
-                listButton.classList.add("active");
-            }
-    
-            // ✅ Right-click context menu for deleting lists
-            listButton.addEventListener("contextmenu", (event) => {
-                event.preventDefault();
-                selectedListElement = listButton;
-            
-                // ✅ Show the existing right-click menu from HTML at the cursor's position
-                const listMenu = document.getElementById("list-menu");
-                listMenu.style.top = `${event.clientY}px`;
-                listMenu.style.left = `${event.clientX}px`;
-                listMenu.style.display = "block";
-            });
-    
-            sidebar.appendChild(listButton);
-        });
-    
-        // ✅ Add the "+ Add List" button
-        const addListButton = document.createElement("button");
-        addListButton.classList.add("add-list");
-        addListButton.textContent = "+ Add a List";
-        addListButton.onclick = addList;
-        sidebar.appendChild(addListButton);
-    }
-    
-    // ✅ Function to delete list and update localStorage
-    function deleteList(listName) {
-        if (Object.keys(lists).length === 1) {
-            alert("You must have at least one list!");
-            return;
-        }
-    
-        delete lists[listName];
-        saveListsToLocalStorage();
-    
-        // Switch to first available list
-        currentListName = Object.keys(lists)[0];
-        loadLists();
-        loadTasks();
-    }
+    const listMenu = document.getElementById("list-menu");
+    const deleteListBtn = document.getElementById("delete-list-btn");
 
     function loadTasks() {
-        taskList.innerHTML = ""; // Clear task list
+        taskList.innerHTML = ""; // Clear previous tasks
 
-        (lists[currentListName] || []).forEach((task, index) => {
+        lists[currentListIndex]?.forEach((task, index) => {
             const taskItem = document.createElement("div");
             taskItem.classList.add("task");
 
+            // Create delete circle button (○)
             const circle = document.createElement("span");
             circle.classList.add("circle");
             circle.textContent = "○";
             circle.onclick = () => deleteTask(index);
 
+            // Create task text
             const taskText = document.createElement("span");
             taskText.textContent = task;
 
+            // Append elements to task item
             taskItem.appendChild(circle);
             taskItem.appendChild(taskText);
             taskList.appendChild(taskItem);
         });
     }
 
-    function selectList(listName) {
-        if (listName === currentListName) return;
-        currentListName = listName;
+    function deleteTask(index) {
+        const sound = new Audio("delete-sound.mp3");
+        sound.play();
 
-        document.querySelectorAll(".list-button").forEach((button) => {
-            button.classList.toggle("active", button.textContent === listName);
+        lists[currentListIndex].splice(index, 1);
+        loadTasks();
+    }
+
+    function selectList(index) {
+        if (index === currentListIndex) return;
+        currentListIndex = index;
+
+        document.querySelectorAll(".list-button").forEach((button, i) => {
+            button.classList.toggle("active", i === index);
         });
 
         loadTasks();
@@ -231,80 +89,78 @@ if (deleteListBtn) {
 
     function saveTask(taskText) {
         if (taskText.trim() === "") return;
-        lists[currentListName].push(taskText);
-        saveListsToLocalStorage();
+        lists[currentListIndex].push(taskText);
         loadTasks();
+
         document.querySelector(".task-entry").remove();
-    }
-
-    function deleteTask(index) {
-        const sound = new Audio("done1.mp3");
-        sound.play();
-
-        const taskName = lists[currentListName][index];
-
-        showRatingPopup(taskName, () => {
-            lists[currentListName].splice(index, 1);
-            saveListsToLocalStorage();
-            loadTasks();
-        });
     }
 
     function addList() {
         const newListName = prompt("Enter new list name:");
-        if (newListName && !lists[newListName]) {
-            lists[newListName] = [];
-            saveListsToLocalStorage();
-            loadLists();
-            selectList(newListName);
+        if (newListName) {
+            lists.push([]); // Create an empty task list
+            const newIndex = lists.length - 1;
+
+            const newListButton = document.createElement("button");
+            newListButton.classList.add("list-button");
+            newListButton.textContent = newListName;
+            newListButton.onclick = () => selectList(newIndex);
+
+            newListButton.addEventListener("contextmenu", (event) => openListMenu(event, newListButton));
+
+            sidebar.insertBefore(newListButton, document.querySelector(".add-list"));
+
+            updateListEventListeners();
+            selectList(newIndex);
         }
     }
 
-    function showRatingPopup(taskName, callback) {
-        const popup = document.getElementById("rating-popup");
-        const taskMessage = document.getElementById("popup-task-message");
-        const stars = document.querySelectorAll(".star");
-        const closeButton = document.getElementById("close-popup");
+    function openListMenu(event, listElement) {
+        event.preventDefault();
+        selectedListElement = listElement;
 
-        taskMessage.textContent = `How much did you enjoy completing "${taskName}"?`;
-        popup.style.display = "flex";
-        stars.forEach(star => star.classList.remove("active"));
+        listMenu.style.top = `${event.clientY}px`;
+        listMenu.style.left = `${event.clientX}px`;
+        listMenu.style.display = "block";
+    }
 
-        stars.forEach(star => {
-            star.replaceWith(star.cloneNode(true));
-        });
-
-        const newStars = document.querySelectorAll(".star");
-        newStars.forEach(star => {
-            star.addEventListener("click", () => {
-                newStars.forEach(s => s.classList.remove("active"));
-                star.classList.add("active");
-
-                let value = star.getAttribute("data-value");
-                for (let i = 0; i < value; i++) {
-                    newStars[i].classList.add("active");
-                }
-            });
-        });
-
-        closeButton.replaceWith(closeButton.cloneNode(true));
-        const newCloseButton = document.getElementById("close-popup");
-
-        newCloseButton.addEventListener("click", () => {
-            const sound = new Audio("done2.mp3");
-            sound.play();
-            popup.style.display = "none";
-            callback();
-        });
-
-        popup.addEventListener("click", (event) => {
-            if (event.target === popup) {
-                popup.style.display = "none";
-            }
+    function updateListEventListeners() {
+        document.querySelectorAll(".list-button").forEach((button, index) => {
+            button.onclick = () => selectList(index);
+            button.addEventListener("contextmenu", (event) => openListMenu(event, button));
         });
     }
 
+    deleteListBtn.addEventListener("click", () => {
+        if (selectedListElement) {
+            const listButtons = Array.from(sidebar.querySelectorAll(".list-button"));
+            const selectedIndex = listButtons.indexOf(selectedListElement);
+
+            if (listButtons.length > 2) { // Ensure at least one list remains
+                selectedListElement.remove();
+                lists.splice(selectedIndex, 1);
+
+                // Select the closest valid list
+                const newSelectedIndex = Math.max(0, selectedIndex - 1);
+                selectList(newSelectedIndex);
+                listMenu.style.display = "none";
+
+                updateListEventListeners();
+            } else {
+                alert("You must have at least one list!");
+            }
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!listMenu.contains(event.target)) {
+            listMenu.style.display = "none";
+        }
+    });
+
     document.querySelector(".add-task").onclick = addTask;
-    loadLists();
+    document.querySelector(".add-list").onclick = addList;
+
+    updateListEventListeners();
     loadTasks();
 });
