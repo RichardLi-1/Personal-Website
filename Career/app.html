@@ -8,31 +8,13 @@
     <link rel="stylesheet" href="appstyle.css">
 </head>
 
-<script>
-    import { auth } from "./firebase.js";
-    import { onAuthStateChanged } from "firebase/auth";
-
-    onAuthStateChanged(auth, (user) => {
-        if (!user) {
-            // Redirect to login if not signed in
-            window.location.href = "login.html";
-        }
-    });
-</script>
-
-<script type="module" src="appcode.js"></script>
-
-<!-- ✅ Load Your Firebase & Auth Scripts -->
-<script type="module" src="firebase.js"></script>
-<script type="module" src="auth.js"></script>
-
 <body>
     <header>
         <div class="header-left">
             <img src="logo.png" alt="Logo" class="logo">
             <div class="greeting-container">
                 <p class="greeting">Good Afternoon,</p>
-                <p class="name">Nafisa!</p>
+                <p class="name" id="user-name">Loading...</p>
             </div>
         </div>
         <div class="nav-container">
@@ -71,12 +53,33 @@
         
     </div>
 
-    <!-- Right-click List Menu -->
+        <!-- Right-click List Menu -->
 <div class="list-menu" id="list-menu">
     <button id="delete-list-btn">Delete List</button>
 </div>
+    <!-- ✅ Task Completion Rating Popup -->
+<div id="rating-popup" class="popup-overlay">
+    <div class="popup-content">
+        <h3 id="popup-task-message">How much did you enjoy completing the task?</h3>
+        <div class="star-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <button id="close-popup">Submit</button>
+    </div>
+</div>
 
-    <script src="appcode.js"></script>
+
+
+<!-- ✅ Load Firebase & Auth Scripts First -->
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+
+<!-- ✅ Load the Main App Logic -->
+<script type="module" src="appcode.js"></script>
     </body>
   </html>
 
